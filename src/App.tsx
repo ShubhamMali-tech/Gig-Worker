@@ -1,23 +1,12 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-
-      <h1>GigWorker</h1>
-
-      <p>Find work. Earn more.</p>
-
-      <p>
-        Connect with opportunities built for gig workers.
-      </p>
-
-      <div className="buttons">
-        <button>Find Work</button>
-        <button>Become a Worker</button>
-      </div>
+      <Hero />
     </div>
   )
 }
