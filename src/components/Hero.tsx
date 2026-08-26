@@ -4,24 +4,24 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <p className="hero-label">GIG WORKER PLATFORM</p>
-
         <h1>
-          Find Work.
+          Deliver food.
           <br />
-          Earn More.
+          <span>Earn simply.</span>
         </h1>
 
         <p className="hero-description">
-          Connect with opportunities built for gig workers.
-          Find flexible work and take control of your earnings.
+          Hit the road, deliver meals to hungry customers, and earn on your
+          own schedule. Join the fast-growing fleet of local riders.
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-button">Find Work</button>
+          <button className="primary-button">
+            Start Delivering
+          </button>
 
           <button className="secondary-button">
-            Become a Worker
+            How It Works
           </button>
         </div>
       </div>

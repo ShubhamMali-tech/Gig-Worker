@@ -5,12 +5,16 @@ nav {
 
   padding: 20px 40px;
 
-  background-color: white;
-  border-bottom: 1px solid #e5e5e5;
+  background: transparent;
+  border: 1px solid #2e303a;
+  border-radius: 12px;
+
+  box-sizing: border-box;
 }
 
 nav strong {
   font-size: 24px;
+  color: #9ca3af;
 }
 
 nav div {
@@ -20,11 +24,12 @@ nav div {
 }
 
 nav a {
-  color: #333;
+  color: #9ca3af;
   text-decoration: none;
   font-size: 15px;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #666;
+  color: #f3f4f6;
 }
