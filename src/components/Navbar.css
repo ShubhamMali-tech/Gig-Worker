@@ -3,33 +3,74 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 40px;
+  margin: 24px 40px 0;
+  padding: 16px 30px;
 
-  background: transparent;
-  border: 1px solid #2e303a;
-  border-radius: 12px;
+  background: #ffffff;
+
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(17, 24, 39, 0.06);
 
   box-sizing: border-box;
 }
 
 nav strong {
-  font-size: 24px;
-  color: #9ca3af;
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.6px;
 }
 
 nav div {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 36px;
 }
 
 nav a {
-  color: #9ca3af;
+  color: #19345d;
   text-decoration: none;
-  font-size: 15px;
-  transition: color 0.2s ease;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 nav a:hover {
-  color: #f3f4f6;
+  color: #b33f1f;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  nav {
+    margin: 20px;
+    padding: 16px 22px;
+  }
+
+  nav div {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
