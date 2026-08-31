@@ -1,3 +1,10 @@
+import {
+  UserRoundCheck,
+  ClipboardCheck,
+  Navigation,
+  WalletCards,
+} from 'lucide-react'
+
 import './HowItWorks.css'
 
 function HowItWorks() {
@@ -27,7 +34,9 @@ function HowItWorks() {
         <div className="steps">
 
           <div className="step">
-            <div className="step-number">1</div>
+            <div className="step-icon">
+              <UserRoundCheck size={24} strokeWidth={1.8} />
+            </div>
 
             <div className="step-content">
               <h3>Sign up and get approved</h3>
@@ -39,7 +48,9 @@ function HowItWorks() {
           </div>
 
           <div className="step">
-            <div className="step-number">2</div>
+            <div className="step-icon">
+              <ClipboardCheck size={24} strokeWidth={1.8} />
+            </div>
 
             <div className="step-content">
               <h3>Accept local orders</h3>
@@ -51,7 +62,9 @@ function HowItWorks() {
           </div>
 
           <div className="step">
-            <div className="step-number">3</div>
+            <div className="step-icon">
+              <Navigation size={24} strokeWidth={1.8} />
+            </div>
 
             <div className="step-content">
               <h3>Pick up and deliver</h3>
@@ -63,7 +76,9 @@ function HowItWorks() {
           </div>
 
           <div className="step">
-            <div className="step-number">4</div>
+            <div className="step-icon">
+              <WalletCards size={24} strokeWidth={1.8} />
+            </div>
 
             <div className="step-content">
               <h3>Earn and track</h3>
