@@ -26,11 +26,17 @@
 .hero h1 {
   margin: 0;
 
+  font-family: var(--heading);
   font-size: 64px;
+  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -2px;
+  letter-spacing: -2.2px;
 
   color: #111827;
+}
+
+.hero h1 span {
+  color: #b33f1f;
 }
 
 .hero-description {
