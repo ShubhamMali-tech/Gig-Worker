@@ -1,52 +1,60 @@
 .hero {
-  min-height: 70vh;
+  min-height: auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 100px 20px;
+  padding: 105px 20px 80px;
 }
 
 .hero-content {
+  width: 100%;
   max-width: 850px;
   text-align: center;
+}
+
+.hero-label {
+  margin-bottom: 18px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #777;
 }
 
 .hero h1 {
   margin: 0;
 
-  font-size: 72px;
+  font-size: 64px;
   line-height: 1.05;
   letter-spacing: -2px;
 
-  color: var(--text-h);
-}
-
-.hero h1 span {
-  color: #a33d20;
+  color: #111827;
 }
 
 .hero-description {
   max-width: 650px;
-  margin: 28px auto 0;
+
+  margin: 24px auto 0;
 
   font-size: 18px;
   line-height: 1.6;
 
-  color: var(--text);
+  color: #19345d;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  align-items: center;
 
-  margin-top: 35px;
+  gap: 14px;
+  margin-top: 34px;
 }
 
 .hero-buttons button {
-  padding: 14px 26px;
+  padding: 13px 24px;
 
   border-radius: 999px;
   border: 1px solid transparent;
@@ -63,14 +71,14 @@
 }
 
 .primary-button {
-  background: #a33d20;
+  background: #b33f1f;
   color: #ffffff;
 }
 
 .secondary-button {
-  background: transparent;
-  color: var(--text-h);
-  border-color: var(--border) !important;
+  background: #ffffff;
+  color: #111827;
+  border-color: #e5e7eb !important;
 }
 
 .hero-buttons button:hover {
@@ -78,21 +86,20 @@
 }
 
 .primary-button:hover {
-  background: #8f341b;
+  background: #a2381c;
 }
 
 .secondary-button:hover {
-  background: var(--accent-bg);
+  background: #fafafa;
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 60vh;
-    padding: 70px 20px;
+    padding: 75px 20px 60px;
   }
 
   .hero h1 {
-    font-size: 46px;
+    font-size: 44px;
     letter-spacing: -1px;
   }
 
@@ -103,6 +110,7 @@
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
+
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
