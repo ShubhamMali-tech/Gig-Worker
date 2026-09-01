@@ -1,0 +1,162 @@
+/* ---------- CATEGORY CARDS ---------- */
+
+.delivery-categories {
+  width: 100%;
+  max-width: 1120px;
+
+  margin: 65px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.delivery-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  border-radius: 28px;
+
+  box-shadow:
+    0 8px 30px rgba(17, 24, 39, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.delivery-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 16px 40px rgba(17, 24, 39, 0.10);
+}
+
+/* ---------- IMAGE ---------- */
+
+.delivery-card-image {
+  width: 100%;
+  height: 230px;
+
+  overflow: hidden;
+
+  background: #f2eee9;
+}
+
+.delivery-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.delivery-card:hover .delivery-card-image img {
+  transform: scale(1.04);
+}
+
+/* ---------- CONTENT ---------- */
+
+.delivery-card-content {
+  padding: 26px 26px 28px;
+}
+
+.delivery-card-content h3 {
+  margin: 0 0 9px;
+
+  font-family: var(--heading);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.35px;
+
+  color: var(--text-h);
+}
+
+.delivery-card-content p {
+  min-height: 52px;
+
+  margin: 0 0 22px;
+
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--text);
+}
+
+/* ---------- BUTTON ---------- */
+
+.delivery-card-content button {
+  min-height: 44px;
+
+  padding: 11px 20px;
+
+  border: 1px solid transparent;
+  border-radius: 11px;
+
+  background: #a33d20;
+  color: #ffffff;
+
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delivery-card-content button:hover {
+  background: #8b331a;
+  transform: translateY(-1px);
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 950px) {
+  .delivery-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .delivery-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 50%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+  .delivery-categories {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-top: 50px;
+  }
+
+  .delivery-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .delivery-card-image {
+    height: 220px;
+  }
+
+  .delivery-card-content {
+    padding: 24px;
+  }
+}
