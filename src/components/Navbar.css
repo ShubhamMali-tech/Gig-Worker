@@ -74,3 +74,26 @@ nav a:hover {
     justify-content: center;
   }
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-symbol {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #a33d20;
+  color: #ffffff;
+
+  font-family: var(--heading);
+  font-size: 19px;
+  font-weight: 800;
+}

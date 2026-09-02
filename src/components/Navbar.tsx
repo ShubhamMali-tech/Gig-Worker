@@ -3,9 +3,10 @@ import './Navbar.css'
 function Navbar() {
   return (
     <nav>
-      <div>
-        <strong>GigWorker</strong>
-      </div>
+      <div className="navbar-brand">
+  <span className="brand-symbol">G</span>
+  <strong>GigWorker</strong>
+</div>
 
       <div>
         <a href="#">Home</a>
