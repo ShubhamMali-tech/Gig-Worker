@@ -1,83 +1,65 @@
+import { Bookmark } from 'lucide-react'
 import './FeaturedJobs.css'
+
+const JOBS = [
+  {
+    id: 1,
+    title: 'Lunch Hour Rider',
+    salary: '₹18,000/month',
+    type: 'Peak Hours',
+    image:
+      'https://images.unsplash.com/photo-1695654390723-479197a8c4a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBmb29kJTIwZGVsaXZlcnklMjB1bmlmb3JtfGVufDF8fHx8MTc3ODY1OTI4NXww&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 2,
+    title: 'Weekend Pizza Courier',
+    salary: 'Flexible shifts',
+    type: 'Part-time',
+    image:
+      'https://images.unsplash.com/photo-1572195577046-2f25894c06fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljJTIwcGl6emF8ZW58MXx8fHwxNzc4NjU5MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 3,
+    title: 'Full-Time Food Delivery',
+    salary: '₹25,000+/month',
+    type: 'Full-time',
+    image:
+      'https://images.unsplash.com/photo-1526367790999-0150786686a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGZvb2QlMjBkZWxpdmVyeXxlbnwxfHx8fDE3Nzg2NTkyODB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+]
 
 function FeaturedJobs() {
   return (
     <section className="featured-jobs">
       <div className="featured-jobs-header">
-        <div>
-          <h2>Fresh delivery routes near you</h2>
+        <h2>Fresh delivery routes near you</h2>
 
-          <p>
-            Find flexible delivery shifts that fit your schedule.
-          </p>
+        <div className="job-cards">
+          {JOBS.map((job) => (
+  <article className="job-card" key={job.id}>
+    <button
+      className="job-bookmark"
+      aria-label={`Bookmark ${job.title}`}
+    >
+      <Bookmark size={18} strokeWidth={1.8} />
+    </button>
+
+    <div className="job-card-image">
+      <img src={job.image} alt={job.title} />
+    </div>
+
+    <div className="job-card-content">
+      <span className="job-badge">{job.type}</span>
+
+      <h3>{job.title}</h3>
+
+      <strong>{job.salary}</strong>
+
+      <button>Apply to Ride</button>
+    </div>
+  </article>
+))}
         </div>
-      </div>
-
-      <div className="job-cards">
-
-        <article className="job-card">
-          <div className="job-card-image">
-            <img
-              src="https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=900&q=85"
-              alt="Lunch Hour Rider"
-            />
-          </div>
-
-          <div className="job-card-content">
-            <span className="job-badge">Part Time</span>
-
-            <h3>Lunch Hour Rider</h3>
-
-            <p>Deliver during the busy lunch hours.</p>
-
-            <strong>₹500 - ₹800 / shift</strong>
-
-            <button>Apply to Ride</button>
-          </div>
-        </article>
-
-        <article className="job-card">
-          <div className="job-card-image">
-            <img
-              src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=900&q=85"
-              alt="Weekend Pizza Courier"
-            />
-          </div>
-
-          <div className="job-card-content">
-            <span className="job-badge">Weekend</span>
-
-            <h3>Weekend Pizza Courier</h3>
-
-            <p>Pick up and deliver fresh pizzas locally.</p>
-
-            <strong>₹700 - ₹1,000 / shift</strong>
-
-            <button>Apply to Ride</button>
-          </div>
-        </article>
-
-        <article className="job-card">
-          <div className="job-card-image">
-            <img
-              src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&w=900&q=85"
-              alt="Full-Time Food Delivery"
-            />
-          </div>
-
-          <div className="job-card-content">
-            <span className="job-badge">Full Time</span>
-
-            <h3>Full-Time Food Delivery</h3>
-
-            <p>Ride full-time and maximize your earnings.</p>
-
-            <strong>₹20,000 - ₹30,000 / month</strong>
-
-            <button>Apply to Ride</button>
-          </div>
-        </article>
-
       </div>
     </section>
   )
