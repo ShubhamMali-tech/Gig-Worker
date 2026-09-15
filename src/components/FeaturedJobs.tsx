@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Bookmark } from 'lucide-react'
 import './FeaturedJobs.css'
 
@@ -29,6 +30,8 @@ const JOBS = [
 ]
 
 function FeaturedJobs() {
+  const [savedJobs, setSavedJobs] = useState<number[]>([])
+
   return (
     <section className="featured-jobs">
       <div className="featured-jobs-header">
@@ -37,12 +40,26 @@ function FeaturedJobs() {
         <div className="job-cards">
           {JOBS.map((job) => (
   <article className="job-card" key={job.id}>
-    <button
-      className="job-bookmark"
-      aria-label={`Bookmark ${job.title}`}
-    >
-      <Bookmark size={18} strokeWidth={1.8} />
-    </button>
+   <button
+  className="job-bookmark"
+  aria-label={`Bookmark ${job.title}`}
+  onClick={() => {
+    setSavedJobs((currentSavedJobs) => {
+      if (currentSavedJobs.includes(job.id)) {
+        return currentSavedJobs.filter((id) => id !== job.id)
+      }
+
+      return [...currentSavedJobs, job.id]
+    })
+  }}
+>
+  <Bookmark
+  size={18}
+  strokeWidth={1.8}
+  fill={savedJobs.includes(job.id) ? '#a33d20' : 'none'}
+  color={savedJobs.includes(job.id) ? '#a33d20' : 'currentColor'}
+/>
+</button>
 
     <div className="job-card-image">
       <img src={job.image} alt={job.title} />
