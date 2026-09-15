@@ -1,0 +1,42 @@
+.benefits {
+  padding: 120px 40px 130px;
+  background: var(--bg);
+}
+
+.benefits-header {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.benefits-header h2 {
+  margin: 0 0 20px;
+
+  font-family: var(--heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.6px;
+
+  color: var(--text-h);
+}
+
+.benefits-header h2 span {
+  color: #a33d20;
+}
+
+.benefits-header p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--text);
+}

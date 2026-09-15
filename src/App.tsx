@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import BrowseCategories from './components/BrowseCategories'
 import FeaturedJobs from './components/FeaturedJobs'
+import Benefits from './components/Benefits'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <HowItWorks />
       <BrowseCategories />
       <FeaturedJobs />
+      <Benefits />
     </div>
   )
 }
